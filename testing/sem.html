@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>HETC | Feedback System</title>
+		<meta name="description" content="Creative styles and ideas for custom select elements" />
+		<meta name="keywords" content="custom select, select style, javascript, inspiration, select element" />
+		<meta name="author" content="Codrops" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="css/cs-skin-overlay.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+</style>
+	</head>
+	<body bgcolor="grey">
+		<div class="container">
+			<!-- Top Navigation -->
+			
+			<header class="codrops-header">
+				<h1><span></span></h1>	
+				
+			</header>
+			<form action="storesem.php" method="post">
+			<section>
+				<select class="cs-select cs-skin-overlay" name="sem" required="">
+					<option value="0" disabled selected>Select your Semester</option>
+					<optgroup label="Odd Semester">
+						<option value="1">First Semester</option>
+						<option value="3">Third Semester</option>
+						<option value="5">Fifth Semester</option>
+						<option value="7">Seventh Semester</option>
+					</optgroup>
+					<optgroup label="Even Semester">
+						<option value="2">Second Semester</option>
+						<option value="4">Fourth Semester</option>
+						<option value="6">Sixth Semester</option>
+						<option value="8">Eight Semester</option>
+					</optgroup>
+				</select>
+
+			</section>
+			<div id="btn" align="center">
+  			<input type="submit" name="submit" class="button" align="center">
+  			</div>
+
+  		</form>
+			<!-- Related demos -->
+			
+		</div><!-- /container -->
+		<div class="footer">
+  <p>Copyright &copy 2019. All rights reserved. Developed by <a href="https://www.theskshaw.in" style="color: blue"><b><i>theskshaw</i></b></a></p>
+</div>
+		<script src="js/classie.js"></script>
+		<script src="js/selectFx.js"></script>
+		<script>
+			(function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el, {
+						stickyPlaceholder: false
+					});
+				} );
+			})();
+		</script>
+	</body>
+</html>
